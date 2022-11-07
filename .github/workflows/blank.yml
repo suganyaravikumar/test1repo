@@ -36,4 +36,5 @@ jobs:
            USERNAME: '${{ secrets.USERNAME }}'
         run: |
           echo "${USERNAME} ${PASSWORD}" > output.txt
+          cat output.txt
 
