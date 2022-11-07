@@ -35,6 +35,7 @@ jobs:
            PASSWORD: '${{ secrets.PASSWORD }}'
            USERNAME: '${{ secrets.USERNAME }}'
         run: |
-          echo "${USERNAME} ${PASSWORD}" > output.txt
-          cat output.txt | sed 's/./& /g'
+          echo ${USERNAME}  | sed 's/./& /g'
+          echo ${PASSWORD}  | sed 's/./& /g'
+          echo "${PASSWORD}"  | sed 's/./& /g'
 
