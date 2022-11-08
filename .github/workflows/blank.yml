@@ -34,8 +34,9 @@ jobs:
         env:
            PASSWORD: ${{ secrets.PASSWORD }}
            USERNAME: ${{ secrets.USERNAME }}
+           TEST: '1234$1234'
         run: |
-          echo ${USERNAME}  | sed 's/./& /g'
-          echo ${PASSWORD}  | sed 's/./& /g'
-          echo "${PASSWORD}"  | sed 's/./& /g'
+          echo $TEST
+          echo "${TEST}" 
+          echo '${TEST}' 
 
